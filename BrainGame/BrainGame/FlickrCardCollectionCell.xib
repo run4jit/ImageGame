@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCardCollectionCell" id="EUD-WD-5Jp" customClass="FlickrCardCollectionCell" customModule="BrainGame" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="199" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="199" height="161"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjd-4R-gvW">
+                        <rect key="frame" x="0.0" y="0.0" width="199" height="161"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FCQ-Br-gSj">
+                        <rect key="frame" x="0.0" y="0.0" width="199" height="161"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sTe-hY-87r">
+                                <rect key="frame" x="8" y="8" width="183" height="121"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLa-XZ-ChS">
+                                <rect key="frame" x="8" y="133" width="183" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="rR9-zZ-jlS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="bjd-4R-gvW" firstAttribute="leading" secondItem="EUD-WD-5Jp" secondAttribute="leading" id="AHl-8c-sL7"/>
+                <constraint firstAttribute="bottom" secondItem="bjd-4R-gvW" secondAttribute="bottom" id="MCt-xy-wCf"/>
+                <constraint firstItem="bjd-4R-gvW" firstAttribute="top" secondItem="EUD-WD-5Jp" secondAttribute="top" id="NEh-xu-uaL"/>
+                <constraint firstItem="FCQ-Br-gSj" firstAttribute="top" secondItem="EUD-WD-5Jp" secondAttribute="top" id="eBT-pp-als"/>
+                <constraint firstAttribute="bottom" secondItem="FCQ-Br-gSj" secondAttribute="bottom" id="eLl-dz-8bf"/>
+                <constraint firstAttribute="trailing" secondItem="FCQ-Br-gSj" secondAttribute="trailing" id="hoI-dA-yjw"/>
+                <constraint firstAttribute="trailing" secondItem="bjd-4R-gvW" secondAttribute="trailing" id="l6c-7w-ffA"/>
+                <constraint firstItem="FCQ-Br-gSj" firstAttribute="leading" secondItem="EUD-WD-5Jp" secondAttribute="leading" id="n8e-k6-FpL"/>
+            </constraints>
+            <size key="customSize" width="199" height="161"/>
+            <connections>
+                <outlet property="flickrCardImageView" destination="sTe-hY-87r" id="RcG-8r-Z2q"/>
+                <outlet property="flickrCardNumber" destination="WLa-XZ-ChS" id="EQW-pD-bB8"/>
+                <outlet property="numberLabel" destination="bjd-4R-gvW" id="gh2-kJ-sOl"/>
+            </connections>
+            <point key="canvasLocation" x="-50.5" y="94.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
