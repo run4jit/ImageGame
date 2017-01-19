@@ -1,5 +1,5 @@
 //
-//  FlickrCardCollectionCell.swift
+//  FlickrCardCollectionCellViewMode.swift
 //  BrainGame
 //
 //  Created by ranjeetkumar on 18/01/17.
@@ -8,19 +8,24 @@
 
 import Foundation
 import UIKit
-import AlamofireImage
-import Alamofire
 
-class FlickrCardCollectionCell: UICollectionViewCell {
-    @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var numberLabel: UILabel!
+protocol FlickrCardCollectionCellViewModeDelegate: class {
+    func getCardCollectionCell() -> FlickrCardCollectionCell
+}
+class FlickrCardCollectionCellViewMode {
+
+    var flickrCart: FlickrCardType
+    var cellDelegate: FlickrCardCollectionCellViewModeDelegate?
     
-    @IBOutlet weak var flickrCardImageView: UIImageView!
-    @IBOutlet weak var flickrCardNumber: UILabel!
-     
+    init(flickrCart:FlickrCardType) {
+        self.flickrCart = flickrCart;
+        self.cardViewUpdateOrReset(flickr: flickrCart)
+    }
     func updateView(flickr: FlickrCardType) -> Void {
         
-        FlickrImageDownloader.sharedInstance.updateView(imageView: flickrCardImageView, flickr: flickr)
+        guard let url =  flickr.imageUrl else {
+            return
+        }
         flickrCardNumber.text = flickr.cardNumber
         numberLabel.text = flickr.cardNumber
     }
@@ -40,4 +45,5 @@ class FlickrCardCollectionCell: UICollectionViewCell {
             resetCardView()
         }
     }
+
 }

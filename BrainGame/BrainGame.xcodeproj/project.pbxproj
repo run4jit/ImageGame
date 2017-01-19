@@ -10,7 +10,7 @@
 		2FB356FB8EFC8D838AA952BC /* Pods_BrainGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753BEC2D677C49879494CEFD /* Pods_BrainGameTests.framework */; };
 		B703B6A6618CB34E510E3E1A /* Pods_BrainGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2DD2185B8CA283E2D30B3D /* Pods_BrainGameUITests.framework */; };
 		B70EAC291E2E53C800C1BF23 /* IntroductionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70EAC281E2E53C800C1BF23 /* IntroductionView.xib */; };
-		B70EAC2B1E2E53F900C1BF23 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70EAC2A1E2E53F900C1BF23 /* NetworkManager.swift */; };
+		B70EAC2B1E2E53F900C1BF23 /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70EAC2A1E2E53F900C1BF23 /* FlickrService.swift */; };
 		B73938F81E2F0E0B0025EEE4 /* FlickrCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73938F71E2F0E0B0025EEE4 /* FlickrCard.swift */; };
 		B73938FA1E2F116C0025EEE4 /* FlickrCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73938F91E2F116C0025EEE4 /* FlickrCardCollectionCell.swift */; };
 		B73938FC1E2F11870025EEE4 /* FlickrCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73938FB1E2F11870025EEE4 /* FlickrCardCollectionCell.xib */; };
@@ -21,6 +21,9 @@
 		B79277981E2E15280022B68B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79277961E2E15280022B68B /* LaunchScreen.storyboard */; };
 		B79277A31E2E15290022B68B /* BrainGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79277A21E2E15290022B68B /* BrainGameTests.swift */; };
 		B79277AE1E2E15290022B68B /* BrainGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79277AD1E2E15290022B68B /* BrainGameUITests.swift */; };
+		B7D6CDB31E2F95840096B6E2 /* placeholderImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D6CDB21E2F95840096B6E2 /* placeholderImage.png */; };
+		B7D6CDB91E2FCBF60096B6E2 /* FlickrImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6CDB81E2FCBF60096B6E2 /* FlickrImageDownloader.swift */; };
+		B7EE074F1E2F530800CB122B /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EE074E1E2F530800CB122B /* GameViewModel.swift */; };
 		F80DE5F1AB6612799EDB0CDE /* Pods_BrainGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2990A548F110802FE38BA7C /* Pods_BrainGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +54,7 @@
 		9B694B505C7DC8162481B29C /* Pods-BrainGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainGameTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrainGameTests/Pods-BrainGameTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2990A548F110802FE38BA7C /* Pods_BrainGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70EAC281E2E53C800C1BF23 /* IntroductionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroductionView.xib; sourceTree = "<group>"; };
-		B70EAC2A1E2E53F900C1BF23 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B70EAC2A1E2E53F900C1BF23 /* FlickrService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
 		B73938F71E2F0E0B0025EEE4 /* FlickrCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrCard.swift; sourceTree = "<group>"; };
 		B73938F91E2F116C0025EEE4 /* FlickrCardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrCardCollectionCell.swift; sourceTree = "<group>"; };
 		B73938FB1E2F11870025EEE4 /* FlickrCardCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlickrCardCollectionCell.xib; sourceTree = "<group>"; };
@@ -68,6 +71,9 @@
 		B79277A91E2E15290022B68B /* BrainGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79277AD1E2E15290022B68B /* BrainGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainGameUITests.swift; sourceTree = "<group>"; };
 		B79277AF1E2E15290022B68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7D6CDB21E2F95840096B6E2 /* placeholderImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholderImage.png; sourceTree = "<group>"; };
+		B7D6CDB81E2FCBF60096B6E2 /* FlickrImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrImageDownloader.swift; sourceTree = "<group>"; };
+		B7EE074E1E2F530800CB122B /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		EE2DD2185B8CA283E2D30B3D /* Pods_BrainGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,14 +155,17 @@
 			children = (
 				B792778D1E2E15280022B68B /* AppDelegate.swift */,
 				B792778F1E2E15280022B68B /* GameViewController.swift */,
+				B7EE074E1E2F530800CB122B /* GameViewModel.swift */,
 				B79277911E2E15280022B68B /* Main.storyboard */,
 				B70EAC281E2E53C800C1BF23 /* IntroductionView.xib */,
 				B79277941E2E15280022B68B /* Assets.xcassets */,
+				B7D6CDB21E2F95840096B6E2 /* placeholderImage.png */,
 				B79277961E2E15280022B68B /* LaunchScreen.storyboard */,
 				B79277991E2E15280022B68B /* Info.plist */,
-				B70EAC2A1E2E53F900C1BF23 /* NetworkManager.swift */,
+				B70EAC2A1E2E53F900C1BF23 /* FlickrService.swift */,
 				B73938F71E2F0E0B0025EEE4 /* FlickrCard.swift */,
 				B73938F91E2F116C0025EEE4 /* FlickrCardCollectionCell.swift */,
+				B7D6CDB81E2FCBF60096B6E2 /* FlickrImageDownloader.swift */,
 				B73938FB1E2F11870025EEE4 /* FlickrCardCollectionCell.xib */,
 			);
 			path = BrainGame;
@@ -299,6 +308,7 @@
 				B79277981E2E15280022B68B /* LaunchScreen.storyboard in Resources */,
 				B79277951E2E15280022B68B /* Assets.xcassets in Resources */,
 				B73938FC1E2F11870025EEE4 /* FlickrCardCollectionCell.xib in Resources */,
+				B7D6CDB31E2F95840096B6E2 /* placeholderImage.png in Resources */,
 				B70EAC291E2E53C800C1BF23 /* IntroductionView.xib in Resources */,
 				B79277931E2E15280022B68B /* Main.storyboard in Resources */,
 			);
@@ -463,8 +473,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7EE074F1E2F530800CB122B /* GameViewModel.swift in Sources */,
 				B73938F81E2F0E0B0025EEE4 /* FlickrCard.swift in Sources */,
-				B70EAC2B1E2E53F900C1BF23 /* NetworkManager.swift in Sources */,
+				B7D6CDB91E2FCBF60096B6E2 /* FlickrImageDownloader.swift in Sources */,
+				B70EAC2B1E2E53F900C1BF23 /* FlickrService.swift in Sources */,
 				B79277901E2E15280022B68B /* GameViewController.swift in Sources */,
 				B792778E1E2E15280022B68B /* AppDelegate.swift in Sources */,
 				B73938FA1E2F116C0025EEE4 /* FlickrCardCollectionCell.swift in Sources */,

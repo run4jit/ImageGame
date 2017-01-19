@@ -28,11 +28,23 @@ class FlickrCard: FlickrCardType {
     
     convenience init(json: [String: String], index: UInt) {
         let imageUrl = json["image_url"]  ?? "https://www.mylinea.com/wp-content/uploads/natural-beauty-wallpaper.jpg"
-        self.init(imgUrl: imageUrl, cardNumber: index+1)
+        self.init(imgUrl: imageUrl, cardNumber: index + 1)
+    }
+    
+    static func == (lhs: FlickrCardType, rhs: FlickrCard) -> Bool {
+        return lhs.cardNumber == rhs.cardNumber
     }
     
     func isCorrectCardNumber(number: UInt) -> Bool
     {
         return number == UInt(cardNumber)
+    }
+    
+    func getCardIndex() -> Int {
+        guard let index = Int(self.cardNumber) else {
+            return -1
+        }
+        
+        return index - 1;
     }
 }
